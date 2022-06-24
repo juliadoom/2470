@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery-cycle-all.js"></script>
+    <script type="text/javascript" src="js/carousel.js"></script>
+    <script type="text/javascript">
+      //Builds carousel and pulls details from JSON file
+      var html = "";
+      $(document).ready(function() {
+        $.getJSON("js/six-things.json", function(data) {
+          $.each(data, function(key, value) {
+            $.each(value, function(index, stuff) {
+              console.log(index + " " + stuff.Activity);
+              html += '<div class="things">';
+              html += '<h2 id="location">' + stuff.Activity + "</h2>";
+              html += "<h4>" + stuff.Location + "</h4>";
+              html +=
+                '<p onclick="sixThings(' +
+                stuff.id +
+                ')"style="position: relative;"><img src="' +
+                stuff.Image +
+                '"style="width:400px; height:300px; border: solid 4px black;"></p></div>';
+            });
+          });
+          //Timer and speed of Previous and Next buttons
+          $("#things").html(html);
+          $("#things").cycle({
+            fx: "fade",
+            pause: "1",
+            prev: "#prev",
+            next: "#next",
+            speed: 500,
+            timeout: 10000
+          });
+        });
+      });
+    </script>
+    <title>Carousel</title>
+    <link type="text/css" rel="stylesheet" href="/Carousel/carousel.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div id="main">Carousel of Things I Like To Do</div>
+    <div>
+      <!--Table that holds buttons, images, and titles above images-->
+      <table style="width:650px">
+        <tr style="height: auto">
+          <td><a href="#" id="prev">Previous</a></td>
+          <td style="width: 300px; height: auto"><div id="things"></div></td>
+          <td><a href="#" id="next">Next</a></td>
+        </tr>
+      </table>
+    </div>
+    <!--Description display for each image when clicked-->
+    <div id="information">
+      <figure>
+        <figcaption></figcaption>
+      </figure>
+    </div>
+  </body>
+</html>

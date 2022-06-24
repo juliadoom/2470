@@ -1,0 +1,41 @@
+{
+  "things": [
+    {
+      "Activity": "Cooking",
+      "Location": "Preparing meals for myself or for friends and family",
+      "Years": 27,
+      "Image": "img/cooking.jpg"
+    },
+    {
+      "Activity": "Video Games",
+      "Location": "Playing video games such as RPGs or FPS with friends",
+      "Years": 5,
+      "Image": "img/games.jpg"
+    },
+    {
+      "Activity": "Gardening",
+      "Location": "My second year having a garden including peas, tomatoes, squash, lettuce, and beans",
+      "Years": 4,
+      "Image": "img/gardening.jpg"
+    },
+    {
+      "Activity": "Hiking",
+      "Location": "Hiking all over Utah and Colorado",
+      "Years": 16,
+      "Image": "img/hikes.jpg"
+      
+    },
+    {
+      "Activity": "Needlepoint",
+      "Location": "Making embroideries on denim clothing and following needlepoint patterns",
+      "Years": 7,
+      "Image": "img/needlepoint.jpg"
+    },
+    {
+      "Activity": "Petting Cats",
+      "Location": "Soft kitties and their relaxing purrs",
+      "Years": 30,
+      "Image": "img/petcat.jpg"
+    }
+  ]
+}

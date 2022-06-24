@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JQuery Intro</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="jquery.min.js"></script>
+    <script src="jquery-ui.js"></script>
+    <script src="formValidation.js" type="text/javascript"></script>
+    <script>
+      $(document).ready(function() {
+        $("#accordion").accordion();
+        $("#btn").click(function() {
+          var hobby = $("#hvalue").val();
+          var newhobby = $("<li>" + hobby + "</li>");
+          $("#list").append(newhobby);
+          $("#hvalue").val("");
+        });
+      });
+    </script>
+    <style>
+      html {
+        font-family: Aril;
+      }
+      h3 {
+        background-color: greenyellow;
+        width: 50%;
+      }
+      #listcontain {
+        position: relative;
+        height: 105px;
+      }
+    </style>
+  </head>
+  <body>
+    <form name="myForm" action="" onsubmit="return(validate());">
+      <div id="accordion">
+        <h3>Personal Information</h3>
+        <div>
+          <input type="text" placeholder="First Name" name="fName" />
+          <input type="text" placeholder="Last Name" name="lName" />
+        </div>
+        <h3>Hobbies</h3>
+        <div>
+          <input id="hvalue" type="text" placeholder="Hobby" />
+          <input id="btn" type="button" value="Add Hobby" />
+          <div id="listcontain">
+            <ul id="list"></ul>
+          </div>
+        </div>
+        <h3>School Information</h3>
+        <div>
+          <input type="text" placeholder="School Name" name="schoolName" />
+          <input type="text" placeholder="Major" name="major" />
+        </div>
+        <h3>Music Choice</h3>
+        <div>
+          <input type="text" placeholder="Genre" />
+        </div>
+      </div>
+      <input type="submit" id="submitBtn" />
+    </form>
+  </body>
+</html>
