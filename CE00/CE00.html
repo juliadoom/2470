@@ -1,0 +1,64 @@
+<html>
+<head>
+<title>JavaScript Basics</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+    alert("Hello World");
+    alert (5 + 3);
+    alert (5 - 3);
+    alert (5 * 3);
+    alert (5 / 3);
+    a = 5
+    var b = 3
+    alert(a + b);
+    alert(a - b);
+    alert(a * b);
+    alert(a / b);
+    //Here is a comment
+    /*
+     * Here is a multline
+     * comment
+     * Julia
+     * Dressman
+     */
+    var bookshelf = [];
+    bookself[0] = "Jane Eyre"
+    bookshelf[1] = "The Stranger"
+    bookshelf[2] = "Oliver Twist"
+    bookshelf[3] = "Rebecca"
+    bookshelf[4] = "Stranger in a Strange Land"
+    
+    var person = new Object();
+    person.firstname = "Julia";
+    person.lastname = "Dressman";
+    person.birthday = new Date(1993, 8, 1)
+    person.getFullName = function() {
+        document.write("<h3>" + person.firstname + "" + person.lastname + "</h3>")
+    }
+</script>
+</head>
+<body>
+<div>
+<h2>Hello World</h2>
+<script>
+    person.getFullName();
+    var d = new Date();
+    if(d.getMonth()== person.birthday.getMonth()) {
+        document.write("It is your birthday")
+    }else{
+        document.write("It is not your birthday")
+    }
+</script>
+<p>This is just a page to show an example of JS.</p>
+<ol>
+<script>
+    for (i = 0; i < bookshelf.length; i++) {
+        document.write("<li>" + bookshelf[i] + "</li>")
+    }
+</script>
+</ol>
+
+</div>
+</body>
+</html>
